@@ -9,6 +9,39 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Loaded="Page_Loaded">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+            <RowDefinition Height="1"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
+        <Canvas Name="outputImageCanvas" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="0" Grid.Row="0">
+            <CaptureElement Name="outputImageCaptureElement" Stretch="Uniform" RenderTransformOrigin="0.5,0.5">
+                <CaptureElement.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleX="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </CaptureElement.RenderTransform>
+            </CaptureElement>
+        </Canvas>
+        <!--<Image Name="outputImage" Grid.Row="0" Grid.Column="0"></Image>-->
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                <ColumnDefinition Width="0.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Name="outputLabel" Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" VerticalAlignment="Center" FontSize="75"></TextBlock>
+            <TextBlock Name="outputDebugLabel" Grid.Column="1" Grid.Row="0" HorizontalTextAlignment="Left" VerticalAlignment="Center" FontSize="30"></TextBlock>
+        </Grid>
     </Grid>
 </Page>

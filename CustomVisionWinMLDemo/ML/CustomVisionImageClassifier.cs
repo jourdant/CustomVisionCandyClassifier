@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.AI.MachineLearning.Preview;
 using Windows.Graphics.Imaging;
@@ -40,6 +38,7 @@ namespace CustomVisionWinMLDemo.ML
 
             //read properties out of the model for binding
             _inputImageDescription = (ImageVariableDescriptorPreview)inputFeatures.FirstOrDefault();
+            _isLoaded = true;
         }
 
         public async Task<CustomVisionImageClassification> EvaluateModelAsync(IRandomAccessStream randomAccessStream)

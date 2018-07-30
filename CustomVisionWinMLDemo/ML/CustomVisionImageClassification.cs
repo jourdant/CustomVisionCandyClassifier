@@ -11,7 +11,11 @@ namespace CustomVisionWinMLDemo.ML
         public CustomVisionImageClassification()
         {
             ClassLabel = new List<string>();
-            Loss = new Dictionary<string, float>();
+            Loss = new Dictionary<string, float>()
+            {
+                { "Mars" ,float.NaN },
+                {"Snickers", float.NaN }
+            };
         }
     }
 }
