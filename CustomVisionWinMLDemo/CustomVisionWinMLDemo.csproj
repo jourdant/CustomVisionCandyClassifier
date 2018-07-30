@@ -107,7 +107,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <None Include="Assets\6e877eb0f1e54062977080a945bf5e82.onnx" />
+    <Content Include="Assets\6e877eb0f1e54062977080a945bf5e82.onnx" />
     <None Include="CustomVisionWinMLDemo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
