@@ -92,18 +92,22 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="6e877eb0f1e54062977080a945bf5e82.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ML\CustomVisionImageClassification.cs" />
+    <Compile Include="ML\CustomVisionImageClassifier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="Assets\6e877eb0f1e54062977080a945bf5e82.onnx" />
     <None Include="CustomVisionWinMLDemo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

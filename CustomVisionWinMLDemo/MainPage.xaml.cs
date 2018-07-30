@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomVisionWinMLDemo.ML;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,23 @@ namespace CustomVisionWinMLDemo
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        CustomVisionImageClassifier model;
+
+
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            //initialise model
+            model = new CustomVisionImageClassifier("ms-appx:///Assets/6e877eb0f1e54062977080a945bf5e82.onnx");
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            //load model
+            await model.LoadModelAsync();
+
         }
     }
 }
